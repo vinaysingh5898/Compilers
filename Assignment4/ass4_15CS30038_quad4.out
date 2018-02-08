@@ -1,0 +1,83 @@
+================================================================================
+Symbol Table: Global                                         Parent: null
+--------------------------------------------------------------------------------
+Name            Type            Category    Init Val    Size    Offset  Nest
+--------------------------------------------------------------------------------
+0x1b58820       local       test            0       4           4       null
+0x1b588c0       temp        t00             4       4           4       null
+0x1b58c70       function    main            8                   0       main
+0x1b59c90       function    factorial       8                   4       factorial
+--------------------------------------------------------------------------------
+
+================================================================================
+Symbol Table: main                                           Parent: Global
+--------------------------------------------------------------------------------
+Name            Type            Category    Init Val    Size    Offset  Nest
+--------------------------------------------------------------------------------
+0x1b58e80       local       n               0       6           4       null
+0x1b58f20       temp        t00             4       6           4       null
+0x1b592f0       local       fn              8                   4       null
+0x1b59440       local       factorial       12                  4       null
+0x1b59790       temp        t01             16                  4       null
+0x1b59990       temp        t02             20                  4       null
+--------------------------------------------------------------------------------
+
+================================================================================
+Symbol Table: factorial                                      Parent: Global
+--------------------------------------------------------------------------------
+Name            Type            Category    Init Val    Size    Offset  Nest
+--------------------------------------------------------------------------------
+0x1b59e30       param       n               0                   4       null
+0x1b59c90       local       retVal          4                   4       null
+0x1b5a120       local       m               8                   4       null
+0x1b5a2b0       temp        t00             12      1           4       null
+0x1b5a540       temp        t01             16                  4       null
+0x1b5a6d0       temp        t02             20                  4       null
+0x1b5a9b0       local       r               24      1           4       null
+0x1b5aa50       temp        t03             28      1           4       null
+0x1b5b000       local       fn              32                  4       null
+0x1b5b0a0       local       factorial       36                  4       null
+0x1b5b350       temp        t04             40      1           4       null
+0x1b5b5e0       temp        t05             44                  4       null
+0x1b5b770       temp        t06             48                  4       null
+0x1b5b9b0       temp        t07             52                  4       null
+0x1b5be50       temp        t08             56                  4       null
+0x1b5bfe0       temp        t09             60                  4       null
+0x1b5c180       temp        t10             64                  4       null
+--------------------------------------------------------------------------------
+
+==============================
+Quad-Translation
+------------------------------
+	0   :	t00 = 4
+	1   :	test = t00
+
+main: 
+
+	3   :	t00 = 6
+	4   :	n = t00
+	5   :	param n
+	6   :	t01 = call factorial, 1
+	7   :	fn = t01
+	8   :	ret 
+
+factorial: 
+
+	10  :	t00 = 1
+	11  :	t02 = n - t00
+	12  :	m = t02
+	13  :	t03 = 1
+	14  :	r = t03
+	15  :	goto 24
+	16  :	t04 = 1
+	17  :	t06 = m - t04
+	18  :	param t06
+	19  :	t07 = call factorial, 1
+	20  :	fn = t07
+	21  :	t09 = n * fn
+	22  :	r = t09
+	23  :	goto 26
+	24  :	if m == 0 goto 26
+	25  :	goto 16
+	26  :	ret r
+------------------------------

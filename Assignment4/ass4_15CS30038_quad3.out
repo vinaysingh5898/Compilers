@@ -1,0 +1,91 @@
+================================================================================
+Symbol Table: Global                                         Parent: null
+--------------------------------------------------------------------------------
+Name            Type            Category    Init Val    Size    Offset  Nest
+--------------------------------------------------------------------------------
+0x12bd820       local       test            0       1           4       null
+0x12bd8c0       temp        t00             4       1           4       null
+0x12bdc70       function    main            8                   4       main
+--------------------------------------------------------------------------------
+
+================================================================================
+Symbol Table: main                                           Parent: Global
+--------------------------------------------------------------------------------
+Name            Type            Category    Init Val    Size    Offset  Nest
+--------------------------------------------------------------------------------
+0x12bdc70       local       retVal          0                   4       null
+0x12bdfb0       local       a               4       1           4       null
+0x12be050       temp        t00             8       1           4       null
+0x12be400       local       b               12      2           4       null
+0x12be4a0       temp        t01             16      2           4       null
+0x12be850       local       c               20                  4       null
+0x12beb80       temp        t02             24                  4       null
+0x12bed10       temp        t03             28                  4       null
+0x12beeb0       temp        t04             32                  4       null
+0x12bf130       temp        t05             36                  4       null
+0x12bf540       temp        t06             40      2           4       null
+0x12bf830       temp        t07             44                  4       null
+0x12bf9d0       temp        t08             48                  4       null
+0x12bfda0       temp        t09             52                  4       null
+0x12bff30       temp        t10             56                  4       null
+0x12c00d0       temp        t11             60                  4       null
+0x12c0340       local       d               64                  8       null
+0x12c0670       temp        t12             72                  4       null
+0x12c0870       temp        t13             76                  4       null
+0x12c0a10       temp        t14             80                  8       null
+0x12c0cf0       local       check           88                  4       null
+0x12c1000       temp        t15             92                  4       null
+0x12c1190       temp        t16             96                  4       null
+0x12c1330       temp        t17             100                 4       null
+0x12c14c0       temp        t18             104                 4       null
+0x12c18d0       temp        t19             108                 4       null
+0x12c1ee0       temp        t20             112                 4       null
+0x12c2070       temp        t21             116                 4       null
+0x12c2210       temp        t22             120                 4       null
+0x12c24c0       local       i               124                 4       null
+0x12c2920       temp        t23             128                 4       null
+0x12c2b90       temp        t24             132                 4       null
+0x12c2d20       temp        t25             136                 4       null
+0x12c2ec0       temp        t26             140                 4       null
+--------------------------------------------------------------------------------
+
+==============================
+Quad-Translation
+------------------------------
+	0   :	t00 = 1
+	1   :	test = t00
+
+main: 
+
+	3   :	t00 = 1
+	4   :	a = t00
+	5   :	t01 = 2
+	6   :	b = t01
+	7   :	t03 = a + b
+	8   :	c = t03
+	9   :	t05 = a
+	10  :	a = a + 1
+	11  :	t06 = 2
+	12  :	t07 = a >> t06
+	13  :	a = t07
+	14  :	t10 = a / b
+	15  :	b = t10
+	16  :	t12 = double2int(d)
+	17  :	t13 = a + t12
+	18  :	t14 = int2double(t13)
+	19  :	d = t14
+	20  :	t16 = b * c
+	21  :	t18 = a + t16
+	22  :	check = t18
+	23  :	goto 26
+	24  :	if check < c goto 29
+	25  :	goto 29
+	26  :	t21 = a | b
+	27  :	c = t21
+	28  :	goto 29
+	29  :	a = a + 1
+	30  :	t23 = b
+	31  :	b = b + 1
+	32  :	t25 = a + t23
+	33  :	i = t25
+------------------------------

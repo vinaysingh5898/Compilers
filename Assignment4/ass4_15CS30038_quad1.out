@@ -1,0 +1,209 @@
+================================================================================
+Symbol Table: Global                                         Parent: null
+--------------------------------------------------------------------------------
+Name            Type            Category    Init Val    Size    Offset  Nest
+--------------------------------------------------------------------------------
+0x13ac820       local       test            0       5           4       null
+0x13ac8c0       temp        t00             4       5           4       null
+0x13acc70       local       d               8       2.3         8       null
+0x13acd40       temp        t01             16      2.3         8       null
+0x13ad120       local       i               24                  4       null
+0x13ad270       local       a               28      4           4       null
+0x13ad310       temp        t02             32      4           4       null
+0x13ad6c0       local       p               36                  4       null
+0x13ad830       local       b               40                  4       null
+0x13ad980       function    func            44                  0       func
+0x13addc0       local       c               44                  1       null
+0x13adf10       function    main            45                  4       main
+0x13b4b00       function    factorial       49                  4       factorial
+0x13b7650       function    add             53                  4       add
+--------------------------------------------------------------------------------
+
+================================================================================
+Symbol Table: func                                           Parent: Global
+--------------------------------------------------------------------------------
+Name            Type            Category    Init Val    Size    Offset  Nest
+--------------------------------------------------------------------------------
+0x13adb20       param       i               0                   4       null
+0x13adc70       param       d               4                   8       null
+--------------------------------------------------------------------------------
+
+================================================================================
+Symbol Table: main                                           Parent: Global
+--------------------------------------------------------------------------------
+Name            Type            Category    Init Val    Size    Offset  Nest
+--------------------------------------------------------------------------------
+0x13adf10       local       retVal          0                   4       null
+0x13af810       local       a               4       1           4       null
+0x13ae360       temp        t00             8       10          4       null
+0x13ae5f0       temp        t01             12                  4       null
+0x13ae860       local       x               16                  4       null
+0x13ae9d0       local       y               20                  4       null
+0x13aebe0       temp        t02             24                  4       null
+0x13aede0       temp        t03             28                  4       null
+0x13ae880       temp        t04             32                  4       null
+0x13ae880       temp        t05             36                  4       null
+0x13af6d0       temp        t06             40                  4       null
+0x13af8b0       temp        t07             44      1           4       null
+0x13afc60       local       b               48      2           4       null
+0x13afd00       temp        t08             52      2           4       null
+0x13b00b0       local       c               56                  4       null
+0x13b03e0       temp        t09             60                  4       null
+0x13b0570       temp        t10             64                  4       null
+0x13b0710       temp        t11             68                  4       null
+0x13b0990       temp        t12             72                  4       null
+0x13b0cd0       local       check           76                  4       null
+0x13b0fe0       temp        t13             80                  4       null
+0x13b1170       temp        t14             84                  4       null
+0x13b1310       temp        t15             88                  4       null
+0x13b14a0       temp        t16             92                  4       null
+0x13b18b0       temp        t17             96                  4       null
+0x13b1ec0       temp        t18             100                 4       null
+0x13b2050       temp        t19             104                 4       null
+0x13b21f0       temp        t20             108                 4       null
+0x13b3700       local       i               112                 4       null
+0x13b2840       temp        t21             116                 4       null
+0x13b2980       local       n               120     6           4       null
+0x13b2b50       temp        t22             124     6           4       null
+0x13b2f20       local       fn              128                 4       null
+0x13b3070       local       factorial       132                 4       null
+0x13b33c0       temp        t23             136                 4       null
+0x13b35c0       temp        t24             140                 4       null
+0x13b3850       local       v               144     5           4       null
+0x13b38f0       temp        t25             148     5           4       null
+0x13b3cc0       local       d               152                 8       null
+0x13b44d0       temp        t26             160     1           4       null
+0x13b4760       temp        t27             164                 4       null
+--------------------------------------------------------------------------------
+
+================================================================================
+Symbol Table: factorial                                      Parent: Global
+--------------------------------------------------------------------------------
+Name            Type            Category    Init Val    Size    Offset  Nest
+--------------------------------------------------------------------------------
+0x13b4db0       param       n               0                   4       null
+0x13b4b00       local       retVal          4                   4       null
+0x13b50a0       local       m               8                   4       null
+0x13b5230       temp        t00             12      1           4       null
+0x13b54c0       temp        t01             16                  4       null
+0x13b5650       temp        t02             20                  4       null
+0x13b5930       local       r               24      1           4       null
+0x13b59d0       temp        t03             28      1           4       null
+0x13b5f80       local       fn              32                  4       null
+0x13b6020       local       factorial       36                  4       null
+0x13b62d0       temp        t04             40      1           4       null
+0x13b6560       temp        t05             44                  4       null
+0x13b66f0       temp        t06             48                  4       null
+0x13b6930       temp        t07             52                  4       null
+0x13b6dd0       temp        t08             56                  4       null
+0x13b6f60       temp        t09             60                  4       null
+0x13b7100       temp        t10             64                  4       null
+--------------------------------------------------------------------------------
+
+================================================================================
+Symbol Table: add                                            Parent: Global
+--------------------------------------------------------------------------------
+Name            Type            Category    Init Val    Size    Offset  Nest
+--------------------------------------------------------------------------------
+0x13b7920       param       a               0                   4       null
+0x13b7a70       param       b               4                   4       null
+0x13b7650       local       retVal          8                   4       null
+0x13b7d40       temp        t00             12      10          4       null
+0x13b7fd0       temp        t01             16                  4       null
+0x13b8240       local       x               20                  4       null
+0x13b83b0       local       y               24                  4       null
+0x13b85c0       temp        t02             28                  4       null
+0x13b87c0       temp        t03             32                  4       null
+0x13b8260       temp        t04             36                  4       null
+0x13b8260       temp        t05             40                  4       null
+0x13b90b0       temp        t06             44                  4       null
+--------------------------------------------------------------------------------
+
+==============================
+Quad-Translation
+------------------------------
+	0   :	t00 = 5
+	1   :	test = t00
+	2   :	t01 = 2.3
+	3   :	d = t01
+	4   :	t02 = 4
+	5   :	a = t02
+
+main: 
+
+	7   :	t00 = 10
+	8   :	a = t00
+	9   :	t02 = &y
+	10  :	x = t02
+	11  :	t04 = *x
+	12  :	*x = y
+	13  :	t05 = *x
+	14  :	y = t05
+	15  :	t07 = 1
+	16  :	a = t07
+	17  :	t08 = 2
+	18  :	b = t08
+	19  :	t10 = a + b
+	20  :	c = t10
+	21  :	t12 = a
+	22  :	a = a + 1
+	23  :	t14 = b * c
+	24  :	t16 = a + t14
+	25  :	check = t16
+	26  :	goto 29
+	27  :	if check < c goto 32
+	28  :	goto 32
+	29  :	t19 = a | b
+	30  :	c = t19
+	31  :	goto 32
+	32  :	a = a + 1
+	33  :	i = a
+	34  :	t22 = 6
+	35  :	n = t22
+	36  :	param n
+	37  :	t23 = call factorial, 1
+	38  :	fn = t23
+	39  :	t25 = 5
+	40  :	v = t25
+	41  :	goto 44
+	42  :	if v == 0 goto 50
+	43  :	goto 47
+	44  :	if i == 0 goto 50
+	45  :	goto 42
+	46  :	goto 50
+	47  :	t26 = 1
+	48  :	i = t26
+	49  :	goto 50
+	50  :	ret 
+
+factorial: 
+
+	52  :	t00 = 1
+	53  :	t02 = n - t00
+	54  :	m = t02
+	55  :	t03 = 1
+	56  :	r = t03
+	57  :	goto 66
+	58  :	t04 = 1
+	59  :	t06 = m - t04
+	60  :	param t06
+	61  :	t07 = call factorial, 1
+	62  :	fn = t07
+	63  :	t09 = n * fn
+	64  :	r = t09
+	65  :	goto 68
+	66  :	if m == 0 goto 68
+	67  :	goto 58
+	68  :	ret r
+
+add: 
+
+	70  :	t00 = 10
+	71  :	a = t00
+	72  :	t02 = &y
+	73  :	x = t02
+	74  :	t04 = *x
+	75  :	*x = y
+	76  :	t05 = *x
+	77  :	y = t05
+------------------------------
